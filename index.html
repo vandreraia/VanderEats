@@ -23,20 +23,20 @@
             <spam>Confirme seu pedido</spam>
             <div class="confirmarTela">
                 <div>
-                    <spam>Frango</spam>
-                    <spam>14,90</spam>
+                    <spam id="prato">Frango</spam>
+                    <spam id="pratoPreco">14,90</spam>
                 </div>
                 <div>
-                    <spam>Frango Yin Yang</spam>
-                    <spam>14,90</spam>
+                    <spam id="bebida">Frango Yin Yang</spam>
+                    <spam id="bebidaPreco">14,90</spam>
                 </div>
                 <div>
-                    <spam>Frango Yin Yang</spam>
-                    <spam>14,90</spam>
+                    <spam id="sobremesa">Frango Yin Yang</spam>
+                    <spam id="sobremesaPreco">14,90</spam>
                 </div>
                 <div>
                     <spam class="bold">TOTAL</spam>
-                    <spam class="bold">14,90</spam>
+                    <spam id="total" class="bold">14,90</spam>
                 </div>
                 <button onclick="sendPedido()">Tudo certo, pode pedir!</button>
             </div>
@@ -120,7 +120,7 @@
     <footer>
         <div class="finalizar">
             <button id="finalizar" onclick="confirmarPedido()">
-                <p id="text">Selecione os 3 itens
+                <p id="finalizarText">Selecione os 3 itens
                     para fechar o pedido</p>
             </button>
         </div>
