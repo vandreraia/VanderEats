@@ -1,0 +1,107 @@
+
+
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #eeeeee;
+    margin: 0;
+}
+
+header{
+    background-color:#CF2B2B;
+    position: fixed;
+    width: 100%;
+    padding: 16px 28px;
+    box-shadow: 0px 10px 10px gray;
+}
+
+img{
+    width: 144px;
+    height: 87px;
+}
+main{
+    padding: 130px 0px 130px 20px;
+}
+
+h1{
+    font-size: 44px;
+    margin: 0px;
+    color: white;
+    /* font-family: Righteous; */
+}
+
+h4{
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0px;
+}
+
+h5{
+    font-size: 15px;
+    font-weight: 300;
+    color: #A6A6A6;
+    margin: 5px 0;
+}
+
+header p{
+    font-size: 18px;
+    margin: 0px;
+    color: white;
+}
+.itens{
+    display: flex;
+    overflow-x: scroll
+}
+
+.item{
+    background-color: white;
+    width: 146px;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px 6px;
+    box-shadow: 0px 0px 10px lightgray;
+    border-style: solid;
+    border-color: white;
+    border-width: 6px;;
+}
+
+.item div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item ion-icon{
+    color: #32B72F;
+    display: none;
+}
+.itens p{
+    font-size: 16px;
+    word-break: break-all;
+    margin: 0px;
+}
+
+.finalizar{
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+}
+
+.finalizar div{
+    background-color: #CBCBCB;
+    width: 80%;
+    height: 60px;
+    margin: 20px auto;
+    text-align: center;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.finalizar p{
+    color: white;
+    font-size: 20px;
+    padding: 0 10px;
+}
