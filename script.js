@@ -1,6 +1,7 @@
 function selecionarItem(clicked_id){
     checkItem(clicked_id)
     if (prato && bebida && sobremesa){
+        document.getElementById("finalizar").disabled = false;
         document.getElementById("finalizar").style.backgroundColor = "#32B72F";
         document.getElementById("text").textContent="Fechar pedido";
     }
@@ -14,17 +15,17 @@ function checkItem(myId){
         initialState("sushi");
         initialState("frango");
         initialState("yakissoba");
-        prato = true;
+        prato = myId;
     }
     if (myId == "coca" || myId == "sake"){
         initialState("coca");
         initialState("sake");
-        bebida = true;
+        bebida = myId;
     }
     if (myId == "pudim" || myId == "anko"){
         initialState("pudim");
         initialState("anko");
-        sobremesa = true;
+        sobremesa = myId;
     }
 }
 function initialState(myId){
@@ -32,6 +33,31 @@ function initialState(myId){
     document.getElementById(myId+"Icon").style.display = "none";
 }
 
+function sendPedido(){
+    let total = 0.0;
+
+    if (prato == "frango")
+        total += 14.90;
+    if (prato == "sushi")
+        total += 39.90;
+    if (prato == "yakissoba")
+        total += 29.90;
+
+    if (bebida == "coca")
+        total += 4.90;
+    if (bebida == "sake")
+        total += 14.90;
+
+    if (sobremesa == "pudim")
+        total += 7.90;
+    if (sobremesa == "anko")
+        total += 17.90;
+
+    window.open("https://wa.me/5581999999999?text=Olá, gostaria de fazer o pedido:\n- Prato: " + prato + "\n-Bebida: " + bebida + "\n-Sobremesa: " + sobremesa + "\nTotal: R$ " + total.toFixed(2));
+}
+
 let prato = false;
 let bebida = false;
 let sobremesa = false;
+
+document.getElementById("finalizar").disabled = true;
