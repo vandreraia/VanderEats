@@ -35,6 +35,8 @@ function initialState(myId){
 
 function sendPedido(){
     let total = 0.0;
+    let nome;
+    let endereco;
 
     if (prato == "frango")
         total += 14.90;
@@ -53,7 +55,17 @@ function sendPedido(){
     if (sobremesa == "anko")
         total += 17.90;
 
-    window.open("https://wa.me/5581999999999?text=Olá, gostaria de fazer o pedido:\n- Prato: " + prato + "\n-Bebida: " + bebida + "\n-Sobremesa: " + sobremesa + "\nTotal: R$ " + total.toFixed(2));
+    nome = prompt("qual seu nome?");
+    endereco = prompt("qual seu endereço?");
+    window.open("https://wa.me/5581999999999?text=Olá, gostaria de fazer o pedido:\n- Prato: " + prato + "\n-Bebida: " + bebida + "\n-Sobremesa: " + sobremesa + "\nTotal: R$ " + total.toFixed(2) + "\n\nNome: " + nome + "\nEndereço: " + endereco);
+}
+
+function confirmarPedido(){
+    document.getElementById("confirmarPedido").style.display = "initial";
+}
+
+function cancelar(){
+    document.getElementById("confirmarPedido").style.display = "none";
 }
 
 let prato = false;

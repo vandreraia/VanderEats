@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 body{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -26,9 +26,12 @@ h1{
     font-size: 44px;
     margin: 0px;
     color: white;
-    /* font-family: Righteous; */
+    font-family: Righteous; 
 }
 
+h2 {
+    font-family: Righteous; 
+}
 h4{
     font-size: 16px;
     font-weight: bold;
@@ -105,4 +108,59 @@ header p{
     color: white;
     font-size: 20px;
     padding: 0 10px;
+}
+
+.confirmarPedido{
+    display: initial;
+    position:fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 1;
+}
+
+.confirmarPedido > div{
+    margin: auto 20px;
+    padding: 20px;
+    background-color: #32B72F;
+    text-align: center;
+    border-radius: 6px;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.confirmarTela div{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.confirmarTela spam{
+    font-weight: initial;
+    margin: 10px 0;
+}
+
+.confirmarTela .bold{
+    font-weight: bold;
+}
+
+.confirmarTela button{
+    margin-top: 30px;
+    height: 50px;
+    width: 80%;
+    font-size: 22px;
+    font-weight: bold;
+    color: #32B72F;
+    border-radius: 30px;
+    border-width: 0;
+}
+
+.cancelar{
+    margin-top: 20px;
+    font-size: 22px;
+    background-color: #32B72F;
+    color: white;
+    font-weight: bold;
+    border-width: 0;
 }
