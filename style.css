@@ -17,6 +17,7 @@ header{
 img{
     width: 144px;
     height: 87px;
+    object-fit: contain;
 }
 main{
     padding: 130px 0px 130px 20px;
@@ -111,7 +112,7 @@ header p{
 }
 
 .confirmarPedido{
-    display: initial;
+    display: none;
     position:fixed;
     width: 100%;
     height: 100%;
@@ -120,7 +121,8 @@ header p{
 }
 
 .confirmarPedido > div{
-    margin: 150px 20px;
+    min-width: 350px;
+    margin: auto;
     padding: 20px;
     background-color: #32B72F;
     text-align: center;

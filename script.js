@@ -63,11 +63,11 @@ function sendPedido() {
 
     nome = prompt("qual seu nome?");
     endereco = prompt("qual seu endereço?");
-    window.open("https://wa.me/5581999999999?text=Olá, gostaria de fazer o pedido:\n- Prato: " + prato + "\n-Bebida: " + bebida + "\n-Sobremesa: " + sobremesa + "\nTotal: R$ " + total.toFixed(2) + "\n\nNome: " + nome + "\nEndereço: " + endereco);
+    window.open("https://wa.me/5581999999999?text=Olá, gostaria de fazer o pedido:%0a- Prato: " + prato + "%0a- Bebida: " + bebida + "%0a- Sobremesa: " + sobremesa + "%0aTotal: R$ " + total.toFixed(2) + "%0a%0aNome: " + nome + "%0aEndereço: " + endereco);
 }
 
 function confirmarPedido() {
-    document.getElementById("confirmarPedido").style.display = "initial";
+    document.getElementById("confirmarPedido").style.display = "flex";
     document.getElementById("prato").textContent = prato;
 
     let total = calcPedido(prato, bebida, sobremesa);
@@ -96,6 +96,15 @@ function confirmarPedido() {
 
 function cancelar() {
     document.getElementById("confirmarPedido").style.display = "none";
+    initialState(prato);
+    initialState(bebida);
+    initialState(sobremesa);
+    prato = false;
+    bebida = false;
+    sobremesa = false;
+    document.getElementById("finalizar").disabled = true;
+    document.getElementById("finalizar").style.backgroundColor = "#CBCBCB";
+    document.getElementById("finalizarText").textContent = "Selecione os 3 itens para fechar o pedido";
 }
 
 let prato = false;
