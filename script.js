@@ -67,7 +67,7 @@ function sendPedido() {
 }
 
 function confirmarPedido() {
-    document.getElementById("confirmarPedido").style.display = "flex";
+    document.querySelector(".confirmarPedido").classList.remove("hide");
     document.getElementById("prato").textContent = prato;
 
     let total = calcPedido(prato, bebida, sobremesa);
@@ -95,7 +95,7 @@ function confirmarPedido() {
 }
 
 function cancelar() {
-    document.getElementById("confirmarPedido").style.display = "none";
+    document.querySelector(".confirmarPedido").classList.add("hide");
     initialState(prato);
     initialState(bebida);
     initialState(sobremesa);
